@@ -1,8 +1,11 @@
 import React, { useRef } from 'react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import styles from './styles.module.scss'
+import navCircle from './assets/images/circle.svg'
 import alexander from './assets/images/alexander.png'
 import diogen from './assets/images/diogen.png'
+import diogenLamp from './assets/images/diogen_lamp.png'
+import chicken from './assets/images/chicken.png'
 
 export default function App() {
 
@@ -25,14 +28,20 @@ export default function App() {
     <div>
       <div className={styles.background} />
 
-      <Parallax pages={5}>
+      <Parallax pages={6}>
         <ParallaxLayer offset={0} speed={0.5} style={{ ...alignCenter, justifyContent: 'center' }}>
           <p className={styles.scrollText}>Scroll down</p>
         </ParallaxLayer>
 
         <ParallaxLayer sticky={{ start: 1, end: 4 }} style={{ ...alignCenter, justifyContent: 'flex-start' }}>
-          <div ref={ref1} className={`${styles.card} ${styles.sticky}`}>
+          <div className={`${styles.card} ${styles.sticky}`}>
             <img src={diogen}></img>
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer sticky={{ start: 1.5, end: 3 }} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
+          <div ref={ref1} className={`${styles.card} ${styles.parallax}`}>
+            <img className={`${styles.alexander}`} src={alexander}></img>
           </div>
         </ParallaxLayer>
 
@@ -41,30 +50,29 @@ export default function App() {
           </p>
         </ParallaxLayer>
 
-        <ParallaxLayer ref={ref2} sticky={{ start: 3, end: 4 }} style={{ ...alignCenter, justifyContent: 'center' }}>
+        <ParallaxLayer sticky={{ start: 3, end: 4 }} style={{ ...alignCenter, justifyContent: 'center' }}>
           <p className={styles.text}>Donec ac euismod tortor. Nam semper orci quam, eu molestie ligula cursus sit amet. Nulla aliquam nisi at congue viverra. Maecenas lobortis orci vitae urna posuere ultricies. Fusce sodales, odio et finibus semper, nisi nibh iaculis nulla, dapibus hendrerit ante tortor et metus. Sed iaculis justo id mauris ultrices imperdiet. Cras nec sem fermentum, dictum augue eget, aliquam arcu. Mauris euismod arcu eget vehicula luctus.
           </p>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1.5} speed={0.5} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
-          <div className={`${styles.card} ${styles.parallax}`}>
-            <img src={alexander}></img>
-          </div>
+        <ParallaxLayer sticky={{ start: 5, end: 6 }} style={{ ...alignCenter, justifyContent: 'flex-start' }}>
+          <img ref={ref2} className={styles.diogenLamp} src={diogenLamp}></img>
+          <img ref={ref2} className={styles.chicken} src={chicken}></img>
         </ParallaxLayer>
 
-        <ParallaxLayer sticky={{ start: 0, end: 4 }} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
+        <ParallaxLayer sticky={{ start: 0, end: 6 }} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
           <div className={styles.navbar}>
             <div onClick={handleClick1} className={`${styles.navbar_topage1}`}>
               <p className={`${styles.navbar_topage1_text}`}>Page 1</p>
-              <img  className={`${styles.navbar_topage1_circle}`} src='./src/assets/images/circle.svg'></img>
+              <img className={`${styles.navbar_topage1_circle}`} src={navCircle}></img>
             </div>
             <div onClick={handleClick2} className={`${styles.navbar_topage2}`}>
               <p className={`${styles.navbar_topage2_text}`}>Page 2</p>
-              <img  className={`${styles.navbar_topage2_circle}`} src='./src/assets/images/circle.svg'></img>
+              <img className={`${styles.navbar_topage2_circle}`} src={navCircle}></img>
             </div>
             <div onClick={handleClick3} className={`${styles.navbar_topage3}`}>
               <p className={`${styles.navbar_topage3_text}`}>Page 3</p>
-              <img  className={`${styles.navbar_topage3_circle}`} src='./src/assets/images/circle.svg'></img>
+              <img className={`${styles.navbar_topage3_circle}`} src={navCircle}></img>
             </div>
           </div>
         </ParallaxLayer>

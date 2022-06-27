@@ -1,69 +1,69 @@
 $bg: black;
 $text: white;
+$navOpacity: 80%;
 $navCircleHover: translateX(30%);
 
 .background {
-    background-color: $bg;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-  }
-  
-  .scrollText {
-    font-size: 1.5rem;
-    color: $text;
-  }
-  
-  // restricts div in space
-  .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.25rem;
-    height: 10rem;
-    width: 25%;
-    text-align: center;
-    border-radius: 10px;
-  }
-  
+  background-color: $bg;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
 
-  // governs margin
-  .parallax {
-    margin-right: 15%;
-  }
-  
-  // governs margin, can change margin
-  .sticky {
-    margin-left: 15%;
-  }
+.scrollText {
+  font-size: 1.5rem;
+  color: $text;
+}
 
-  // information text near images
-  .text {
-    color: $text;
-    width: 800px;
-    font-size: 1.5rem;
-  }
+// restricts div in space
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  height: 10rem;
+  width: 25%;
+}
 
-  .navbar {
-    color: $text;
-    margin-right: 2%;
-  }
 
-  .navbar_topage1 {
-    display: flex;
-    gap: 8px;
-    opacity: 80%;
-  }
-  
-  .navbar_topage1:hover {
-    opacity: 100%;
-  }
-  .navbar_topage1:hover .navbar_topage1_circle {
-    transform: $navCircleHover;
+// governs margin
+.parallax {
+  margin-right: 15%;
+}
+
+// governs margin, can change margin
+.sticky {
+  margin-left: 15%;
+}
+
+// information text near images
+.text {
+  color: $text;
+  width: 800px;
+  font-size: 1.5rem;
+}
+
+.navbar {
+  color: $text;
+  margin-right: 2%;
+}
+
+.navbar_topage1 {
+  display: flex;
+  gap: 8px;
+  opacity: $navOpacity;
+}
+
+.navbar_topage1:hover {
+  opacity: 100%;
+}
+
+.navbar_topage1:hover .navbar_topage1_circle {
+  transform: $navCircleHover;
 }
 
 .navbar_topage2:hover .navbar_topage2_circle {
@@ -74,37 +74,93 @@ $navCircleHover: translateX(30%);
   transform: $navCircleHover;
 }
 
-  .navbar_topage2 {
-    display: flex;
-    gap: 8px;
-    opacity: 80%;
+.navbar_topage2 {
+  display: flex;
+  gap: 8px;
+  opacity: $navOpacity;
+}
+
+.navbar_topage2:hover {
+  opacity: 100%;
+}
+
+.navbar_topage3 {
+  display: flex;
+  gap: 8px;
+  opacity: $navOpacity;
+}
+
+.navbar_topage3:hover {
+  opacity: 100%;
+}
+
+.diogenLamp {
+  right: 0;
+  animation: diogenLamp 5s linear infinite;
+}
+
+@keyframes diogenLamp {
+  to  {
+     transform: translateX(100%);
   }
-  
-  .navbar_topage2:hover {
-    opacity: 100%;
+}
+
+.chicken {
+  right: 5;
+  animation: chicken 3s linear infinite;
+}
+
+@keyframes chicken {
+  to  {
+     transform: translateX(100%);
+  }
+}
+
+@media (max-width: 750px) {
+  .card {
+    width: 40%;
   }
 
-  .navbar_topage3 {
-    display: flex;
-    gap: 8px;
-    opacity: 80%;
+  .parallax {
+    margin-right: 1.5rem;
   }
-  
-  .navbar_topage3:hover {
-    opacity: 100%;
-  } 
-  
-  @media (max-width: 750px) {
-    .card {
-      width: 40%;
-    }
-  
-    .parallax {
-      margin-right: 1.5rem;
-    }
-  
-    .sticky {
-      margin-left: 1.5rem;
-    }
+
+  .sticky {
+    margin-left: 1.5rem;
   }
-  
+
+  // this is  meant to make mobile version more readable
+
+  .alexander {
+    opacity: 40%;
+  }
+
+  .text {
+    width: 60%;
+  }
+
+  .navbar_topage1_text {
+    display: none;
+  }
+
+  .navbar_topage2_text {
+    display: none;
+  }
+
+  .navbar_topage3_text {
+    display: none;
+  }
+
+  .navbar_topage1:hover .navbar_topage1_text { 
+    display: block;
+  }
+
+  .navbar_topage2:hover .navbar_topage2_text { 
+    display: block;
+  }
+
+  .navbar_topage3:hover .navbar_topage3_text { 
+    display: block;
+  }
+
+}
