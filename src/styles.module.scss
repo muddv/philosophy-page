@@ -1,5 +1,6 @@
 $bg: black;
 $text: white;
+$navCircleHover: translateX(30%);
 
 .background {
     background-color: $bg;
@@ -46,6 +47,52 @@ $text: white;
     width: 800px;
     font-size: 1.5rem;
   }
+
+  .navbar {
+    color: $text;
+    margin-right: 2%;
+  }
+
+  .navbar_topage1 {
+    display: flex;
+    gap: 8px;
+    opacity: 80%;
+  }
+  
+  .navbar_topage1:hover {
+    opacity: 100%;
+  }
+  .navbar_topage1:hover .navbar_topage1_circle {
+    transform: $navCircleHover;
+}
+
+.navbar_topage2:hover .navbar_topage2_circle {
+  transform: $navCircleHover;
+}
+
+.navbar_topage3:hover .navbar_topage3_circle {
+  transform: $navCircleHover;
+}
+
+  .navbar_topage2 {
+    display: flex;
+    gap: 8px;
+    opacity: 80%;
+  }
+  
+  .navbar_topage2:hover {
+    opacity: 100%;
+  }
+
+  .navbar_topage3 {
+    display: flex;
+    gap: 8px;
+    opacity: 80%;
+  }
+  
+  .navbar_topage3:hover {
+    opacity: 100%;
+  } 
   
   @media (max-width: 750px) {
     .card {
