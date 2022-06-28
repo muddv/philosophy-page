@@ -7,6 +7,8 @@ import diogen from './assets/images/diogen.png'
 import diogenLamp from './assets/images/diogen_lamp1.png'
 import chicken from './assets/images/chicken1.png'
 import arcadia from './assets/images/arcadia.jpg'
+import plato from './assets/images/plato.png'
+import aristotle from './assets/images/aristotle.png'
 
 export default function App() {
 
@@ -29,7 +31,7 @@ export default function App() {
     <div>
       <div className={styles.background} />
 
-      <Parallax pages={6}>
+      <Parallax pages={10}>
         <ParallaxLayer offset={0} speed={0.5} style={{ ...alignCenter, justifyContent: 'center' }}>
           <p className={styles.scrollText}>Scroll down</p>
         </ParallaxLayer>
@@ -62,11 +64,18 @@ export default function App() {
           <div className={styles.animation_text}>Pellentesque at purus rutrum, facilisis libero nec, interdum est. Curabitur venenatis nibh ligula, eu rhoncus ex pretium sit amet. Aliquam at rhoncus lorem, ac pulvinar neque. Cras faucibus, ex vitae imperdiet porta, ex ex fringilla justo, nec blandit elit mi ac massa. Nam id dolor et tellus sollicitudin tincidunt at ut turpis. Curabitur blandit risus nibh, sed scelerisque turpis finibus sed. Vivamus venenatis, lectus ut bibendum consequat, lorem nulla rhoncus nulla, sed auctor ipsum urna et mi. Aenean egestas hendrerit eros congue mollis. Suspendisse sed erat et felis tincidunt congue vel sed orci. Praesent aliquam sem ut consectetur vulputate. Aliquam scelerisque lacinia lorem, egestas imperdiet orci varius id. Cras sed orci fringilla nulla ultricies euismod. </div>
         </ParallaxLayer>
 
-        <ParallaxLayer sticky={{ start: 6, end: 7 }} style={{ ...alignCenter, justifyContent: 'center' }}>
-          <div className={styles.wow}></div>
+        <ParallaxLayer sticky={{ start: 7, end: 9 }} style={{ ...alignCenter, justifyContent: 'center' }}>
+          <img ref={ref3} className={styles.arcadia} src={arcadia}></img>
+          <div className={styles.wow}>Pellentesque at purus rutrum, facilisis libero nec, interdum est. Curabitur venenatis nibh ligula</div>
         </ParallaxLayer>
 
-        <ParallaxLayer sticky={{ start: 0, end: 6 }} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
+        <ParallaxLayer sticky={{ start: 8, end: 9 }} style={{ ...alignCenter, justifyContent: 'center' }}>
+          <img className={styles.plato} src={plato}></img>
+          <img className={styles.aristotle} src={aristotle}></img>
+
+        </ParallaxLayer>
+
+        <ParallaxLayer sticky={{ start: 0, end: 7 }} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
           <div className={styles.navbar}>
             <div onClick={handleClick1} className={`${styles.navbar_topage1}`}>
               <p className={`${styles.navbar_topage1_text}`}>Page 1</p>
