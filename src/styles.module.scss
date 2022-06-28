@@ -2,6 +2,8 @@ $bg: black;
 $text: white;
 $navOpacity: 80%;
 $navCircleHover: translateX(30%);
+$fontSize: 1.5rem;
+$arcadia: './assets/images/arcadia.jpg';
 
 .background {
   background-color: $bg;
@@ -15,7 +17,7 @@ $navCircleHover: translateX(30%);
 }
 
 .scrollText {
-  font-size: 1.5rem;
+  font-size: $fontSize;
   color: $text;
 }
 
@@ -44,9 +46,10 @@ $navCircleHover: translateX(30%);
 .text {
   color: $text;
   width: 800px;
-  font-size: 1.5rem;
+  font-size: $fontSize;
 }
 
+// navbar section
 .navbar {
   color: $text;
   margin-right: 2%;
@@ -94,26 +97,101 @@ $navCircleHover: translateX(30%);
   opacity: 100%;
 }
 
+//animation stuff
 .diogenLamp {
-  right: 0;
-  animation: diogenLamp 5s linear infinite;
+  animation: diogenLamp 5s linear;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes diogenLamp {
-  to  {
-     transform: translateX(100%);
+
+  0%,
+  50% {
+    transform: translateX(-60%) rotate(15deg);
+    opacity: 100%;
+  }
+
+  50%,
+  75% {
+    transform: translateX(-60%) rotate(-15deg);
+    opacity: 100%;
+  }
+
+  75%,
+  99% {
+    transform: translateX(-60%) rotate(0deg);
+    opacity: 100%;
+  }
+
+  99%,
+  100% {
+    transform: translateX(-60%);
+    opacity: 70%;
   }
 }
 
 .chicken {
-  right: 5;
-  animation: chicken 3s linear infinite;
+  animation: chicken 3s linear;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes chicken {
-  to  {
-     transform: translateX(100%);
+  from {
+    margin-left: 1000px;
+    opacity: 100%;
   }
+
+  to {
+    margin-left: 1px;
+    opacity: 60%;
+  }
+}
+
+.animation_text {
+  color: $text;
+  display: flex;
+  position: absolute;
+  height: 400px;
+  width: 500px;
+  right: 300px;
+  font-size: 1rem;
+  animation: animation_text 5s linear;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  font-size: $fontSize;
+  bottom: 350px;
+}
+
+@keyframes animation_text {
+
+  0%,
+  50% {
+    opacity: 0%;
+  }
+
+  50%,
+  80% {
+    opacity: 10%;
+  }
+
+  80%,
+  99% {
+    opacity: 60%;
+
+  }
+
+  99%,
+  100% {
+    opacity: 100%;
+  }
+}
+
+.wow {
+  height: 100vh;
+  width: 100vh;
+  background-image: url('./assets/images/arcadia.jpg')
 }
 
 @media (max-width: 750px) {
@@ -122,11 +200,11 @@ $navCircleHover: translateX(30%);
   }
 
   .parallax {
-    margin-right: 1.5rem;
+    margin-right: $fontSize;
   }
 
   .sticky {
-    margin-left: 1.5rem;
+    margin-left: $fontSize;
   }
 
   // this is  meant to make mobile version more readable
@@ -149,18 +227,6 @@ $navCircleHover: translateX(30%);
 
   .navbar_topage3_text {
     display: none;
-  }
-
-  .navbar_topage1:hover .navbar_topage1_text { 
-    display: block;
-  }
-
-  .navbar_topage2:hover .navbar_topage2_text { 
-    display: block;
-  }
-
-  .navbar_topage3:hover .navbar_topage3_text { 
-    display: block;
   }
 
 }

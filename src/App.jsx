@@ -4,8 +4,9 @@ import styles from './styles.module.scss'
 import navCircle from './assets/images/circle.svg'
 import alexander from './assets/images/alexander.png'
 import diogen from './assets/images/diogen.png'
-import diogenLamp from './assets/images/diogen_lamp.png'
-import chicken from './assets/images/chicken.png'
+import diogenLamp from './assets/images/diogen_lamp1.png'
+import chicken from './assets/images/chicken1.png'
+import arcadia from './assets/images/arcadia.jpg'
 
 export default function App() {
 
@@ -55,9 +56,14 @@ export default function App() {
           </p>
         </ParallaxLayer>
 
-        <ParallaxLayer sticky={{ start: 5, end: 6 }} style={{ ...alignCenter, justifyContent: 'flex-start' }}>
-          <img ref={ref2} className={styles.diogenLamp} src={diogenLamp}></img>
+        <ParallaxLayer sticky={{ start: 5, end: 6 }} style={{ ...alignCenter, justifyContent: 'center' }}>
           <img ref={ref2} className={styles.chicken} src={chicken}></img>
+          <img ref={ref2} className={styles.diogenLamp} src={diogenLamp}></img>
+          <div className={styles.animation_text}>Pellentesque at purus rutrum, facilisis libero nec, interdum est. Curabitur venenatis nibh ligula, eu rhoncus ex pretium sit amet. Aliquam at rhoncus lorem, ac pulvinar neque. Cras faucibus, ex vitae imperdiet porta, ex ex fringilla justo, nec blandit elit mi ac massa. Nam id dolor et tellus sollicitudin tincidunt at ut turpis. Curabitur blandit risus nibh, sed scelerisque turpis finibus sed. Vivamus venenatis, lectus ut bibendum consequat, lorem nulla rhoncus nulla, sed auctor ipsum urna et mi. Aenean egestas hendrerit eros congue mollis. Suspendisse sed erat et felis tincidunt congue vel sed orci. Praesent aliquam sem ut consectetur vulputate. Aliquam scelerisque lacinia lorem, egestas imperdiet orci varius id. Cras sed orci fringilla nulla ultricies euismod. </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer sticky={{ start: 6, end: 7 }} style={{ ...alignCenter, justifyContent: 'center' }}>
+          <div className={styles.wow}></div>
         </ParallaxLayer>
 
         <ParallaxLayer sticky={{ start: 0, end: 6 }} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
