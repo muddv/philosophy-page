@@ -1,7 +1,14 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from 'react-router-dom';
 import styles from './styles.module.scss'
 import navCircle from './assets/images/circle.svg'
+import downArrow from './assets/images/down.svg'
 import alexander from './assets/images/alexander.png'
 import diogen from './assets/images/diogen.png'
 import diogenLamp from './assets/images/diogen_lamp1.png'
@@ -11,8 +18,8 @@ import plato from './assets/images/plato.png'
 import aristotle from './assets/images/aristotle.png'
 
 export default function App() {
-
   const alignCenter = { display: 'flex', alignItems: 'center' }
+  const alignStart = { display: 'flex', alignItems: 'flex-start' }
   // DRY?????
   const ref1 = useRef(null);
   const ref2 = useRef(null);
@@ -30,7 +37,6 @@ export default function App() {
   return (
     <div>
       <div className={styles.background} />
-
       <Parallax pages={10}>
         <ParallaxLayer offset={0} speed={0.5} style={{ ...alignCenter, justifyContent: 'center' }}>
           <p className={styles.scrollText}>Scroll down</p>
@@ -72,10 +78,16 @@ export default function App() {
         <ParallaxLayer sticky={{ start: 8, end: 9 }} style={{ ...alignCenter, justifyContent: 'center' }}>
           <img className={styles.plato} src={plato}></img>
           <img className={styles.aristotle} src={aristotle}></img>
-
         </ParallaxLayer>
 
-        <ParallaxLayer sticky={{ start: 0, end: 7 }} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
+        {/* HEADER */}
+        <ParallaxLayer sticky={{ start: 0, end: 10 }} style={{ ...alignStart, justifyContent: 'center' }}>
+          <header className={styles.header}>
+            wow this is a header
+          </header>
+        </ParallaxLayer>
+
+        <ParallaxLayer sticky={{ start: 0, end: 10 }} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
           <div className={styles.navbar}>
             <div onClick={handleClick1} className={`${styles.navbar_topage1}`}>
               <p className={`${styles.navbar_topage1_text}`}>Page 1</p>
@@ -91,6 +103,7 @@ export default function App() {
             </div>
           </div>
         </ParallaxLayer>
+
       </Parallax>
     </div>
   )

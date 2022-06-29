@@ -201,6 +201,15 @@ $arcadia: './assets/images/arcadia.jpg';
 position: absolute;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  color: $text;
+  background-color: grey;
+  height: 2vh;
+  width: 100%;
+}
+
 @media (max-width: 750px) {
   .card {
     width: 40%;
