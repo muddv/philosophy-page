@@ -6,6 +6,7 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+import Sources from './Sources';
 import styles from './styles.module.scss'
 import navCircle from './assets/images/circle.svg'
 import downArrow from './assets/images/down.svg'
@@ -80,14 +81,12 @@ export default function App() {
           <img className={styles.aristotle} src={aristotle}></img>
         </ParallaxLayer>
 
-        {/* HEADER */}
-        <ParallaxLayer sticky={{ start: 0, end: 10 }} style={{ ...alignStart, justifyContent: 'center' }}>
-          <header className={styles.header}>
-            wow this is a header
-          </header>
-        </ParallaxLayer>
 
+        {/* NAVIGATION LAYER */}
         <ParallaxLayer sticky={{ start: 0, end: 10 }} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
+        <header className={styles.header}>
+          <Router> <Routes><Route path="/Sources" component={Sources} /></Routes>wow this is <Link to="/Sources"> sorces</Link></Router>
+        </header>
           <div className={styles.navbar}>
             <div onClick={handleClick1} className={`${styles.navbar_topage1}`}>
               <p className={`${styles.navbar_topage1_text}`}>Page 1</p>

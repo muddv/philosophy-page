@@ -202,8 +202,8 @@ position: absolute;
 }
 
 .header {
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  bottom: 98vh;
   color: $text;
   background-color: grey;
   height: 2vh;
