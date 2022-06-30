@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { Link } from "wouter";
 import styles from './styles.module.scss'
+import Header from './Header';
 import navCircle from './assets/images/circle.svg'
 import alexander from './assets/images/alexander.png'
 import diogen from './assets/images/diogen.png'
@@ -76,10 +77,7 @@ export default function MainPage() {
   
           {/* NAVIGATION LAYER */}
           <ParallaxLayer sticky={{ start: 0, end: 10 }} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
-          <header className={styles.header}>
-            wow this is header
-            <Link href="sources">Sources</Link>
-            </header>
+            <Header></Header>
             <div className={styles.navbar}>
               <div onClick={handleClick1} className={`${styles.navbar_topage1}`}>
                 <p className={`${styles.navbar_topage1_text}`}>Page 1</p>

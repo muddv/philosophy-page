@@ -104,6 +104,32 @@ $arcadia: './assets/images/arcadia.jpg';
   animation-fill-mode: forwards;
 }
 
+//OTHER PAGES
+.page_headeing {
+  color: $text;
+  margin-top: 10vh;
+}
+
+.sources_container {
+  background-color: $bg;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.sources_text {
+  color: $text;
+  font-size: $fontSize;
+  margin-top: 20vh;
+  margin-left: -12vh;
+  width: 50%;
+}
+
+.sources_image {
+  margin-top: 20vh;
+}
+
+
 @keyframes diogenLamp {
 
   0%,
@@ -186,13 +212,6 @@ $arcadia: './assets/images/arcadia.jpg';
   100% {
     opacity: 100%;
   }
-}
-
-.wow {
-  height: 100vh;
-  width: 100vh;
-  color: $text;
-  background-color: white;
 }
 
 .arcadia {
