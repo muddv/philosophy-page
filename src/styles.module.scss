@@ -55,6 +55,12 @@ $arcadia: './assets/images/arcadia.jpg';
   margin-right: 2%;
 }
 
+.sun_img {
+  display: flex;
+  height: 60vw;
+  align-items: flex-start;
+}
+
 .navbar_topage1 {
   display: flex;
   gap: 8px;

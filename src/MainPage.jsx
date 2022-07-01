@@ -11,6 +11,8 @@ import chicken from './assets/images/chicken1.png'
 import arcadia from './assets/images/arcadia.jpg'
 import plato from './assets/images/plato.png'
 import aristotle from './assets/images/aristotle.png'
+import diogen_barrel from './assets/images/diogen_barrel.png'
+import sun from './assets/images/sun.png'
 
 export default function MainPage() {
     const alignCenter = { display: 'flex', alignItems: 'center' }
@@ -37,15 +39,27 @@ export default function MainPage() {
             <p className={styles.scrollText}>Scroll down</p>
           </ParallaxLayer>
   
-          <ParallaxLayer sticky={{ start: 1, end: 4 }} style={{ ...alignCenter, justifyContent: 'flex-start' }}>
+          <ParallaxLayer sticky={{ start: 1, end: 3 }} style={{ ...alignCenter, justifyContent: 'flex-start' }}>
             <div className={`${styles.card} ${styles.sticky}`}>
               <img src={diogen}></img>
             </div>
           </ParallaxLayer>
-  
+
           <ParallaxLayer sticky={{ start: 1.5, end: 3 }} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
             <div ref={ref1} className={`${styles.card} ${styles.parallax}`}>
               <img className={`${styles.alexander}`} src={alexander}></img>
+            </div>
+          </ParallaxLayer>
+
+          <ParallaxLayer sticky={{ start: 4, end: 5 }} style={{ ...alignCenter, justifyContent: 'flex-start' }}>
+            <div className={`${styles.card} ${styles.sticky}`}>
+              <img src={diogen_barrel}></img>
+            </div>
+          </ParallaxLayer>
+
+          <ParallaxLayer sticky={{ start: 4, end: 5 }} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
+            <div className={`${styles.card} ${styles.sticky} ${styles.sun_img}`}>
+              <img src={sun}></img>
             </div>
           </ParallaxLayer>
   
@@ -59,18 +73,18 @@ export default function MainPage() {
             </p>
           </ParallaxLayer>
   
-          <ParallaxLayer sticky={{ start: 5, end: 6 }} style={{ ...alignCenter, justifyContent: 'center' }}>
+          <ParallaxLayer sticky={{ start: 6, end: 7 }} style={{ ...alignCenter, justifyContent: 'center' }}>
             <img ref={ref2} className={styles.chicken} src={chicken}></img>
             <img ref={ref2} className={styles.diogenLamp} src={diogenLamp}></img>
             <div className={styles.animation_text}>Pellentesque at purus rutrum, facilisis libero nec, interdum est. Curabitur venenatis nibh ligula, eu rhoncus ex pretium sit amet. Aliquam at rhoncus lorem, ac pulvinar neque. Cras faucibus, ex vitae imperdiet porta, ex ex fringilla justo, nec blandit elit mi ac massa. Nam id dolor et tellus sollicitudin tincidunt at ut turpis. Curabitur blandit risus nibh, sed scelerisque turpis finibus sed. Vivamus venenatis, lectus ut bibendum consequat, lorem nulla rhoncus nulla, sed auctor ipsum urna et mi. Aenean egestas hendrerit eros congue mollis. Suspendisse sed erat et felis tincidunt congue vel sed orci. Praesent aliquam sem ut consectetur vulputate. Aliquam scelerisque lacinia lorem, egestas imperdiet orci varius id. Cras sed orci fringilla nulla ultricies euismod. </div>
           </ParallaxLayer>
   
-          <ParallaxLayer sticky={{ start: 7, end: 9 }} style={{ ...alignCenter, justifyContent: 'center' }}>
-            <img ref={ref3} className={styles.arcadia} src={arcadia}></img>
-            <div className={styles.wow}>Pellentesque at purus rutrum, facilisis libero nec, interdum est. Curabitur venenatis nibh ligula</div>
+          <ParallaxLayer sticky={{ start: 8, end: 10 }} style={{ ...alignCenter, justifyContent: 'center' }}>
+            {/*<img ref={ref3} className={styles.arcadia} src={arcadia}></img> */}
+            <div className={styles.text}>Pellentesque at purus rutrum, facilisis libero nec, interdum est. Curabitur venenatis nibh ligula</div>
           </ParallaxLayer>
   
-          <ParallaxLayer sticky={{ start: 8, end: 9 }} style={{ ...alignCenter, justifyContent: 'center' }}>
+          <ParallaxLayer sticky={{ start: 9, end: 10 }} style={{ ...alignCenter, justifyContent: 'center' }}>
             <img className={styles.plato} src={plato}></img>
             <img className={styles.aristotle} src={aristotle}></img>
           </ParallaxLayer>
