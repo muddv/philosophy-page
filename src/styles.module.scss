@@ -129,6 +129,37 @@ $arcadia: './assets/images/arcadia.jpg';
   margin-top: 20vh;
 }
 
+.about_container {
+  background-color: $bg;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about_text {
+  color: $text;
+  font-size: $fontSize;
+  margin-top: 20vh;
+  margin-left: -12vh;
+  width: 50%;
+}
+
+.about_profile_image {
+  margin-top: 10vh;
+}
+
+.about_caption {
+  color: $text;
+  position: absolute;
+  top: 50vh;
+  right: 37vh;
+}
+
+.gh {
+  position: absolute;
+  top: 50vh;
+  right: 34vh;
+}
 
 @keyframes diogenLamp {
 

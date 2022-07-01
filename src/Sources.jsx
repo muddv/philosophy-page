@@ -17,6 +17,11 @@ export default function Sources() {
         id: 'source3',
         name: 'source3',
         author: 'author3'
+    },
+    {
+        id: 'source4',
+        name: 'wow',
+        author: 'heh'
     }];
     return (
         <div>
