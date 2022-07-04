@@ -12,7 +12,7 @@ export default function About() {
                     <h1 className={styles.page_headeing}>this is About page</h1>
                     <div className={styles.about_text}>This page is made by muddv@github as a quick exercise. Made with react spring parallax, wouter, sass, and images from feather and vite. If you want actual source on history of philosophy go to sources. Also, you can hire me to make your website or web app.</div>
                     <img className={styles.about_profile_image} src={profile_picture}></img>
-                    <figcaption class={styles.about_caption}>muddv@github</figcaption>
+                    <figcaption className={styles.about_caption}>muddv@github</figcaption>
                     <img className={styles.gh} src={github}></img>
                 </div>
             </div>

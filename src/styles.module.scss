@@ -194,6 +194,15 @@ $arcadia: './assets/images/arcadia.jpg';
   }
 }
 
+.scholar {
+  display: flex;
+  align-items: flex-end;
+  height: auto; 
+  width: auto; 
+  max-width: 300px; 
+  max-height: 300px;
+}
+
 .chicken {
   animation: chicken 3s linear;
   animation-duration: 5s;

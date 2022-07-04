@@ -13,10 +13,12 @@ import plato from './assets/images/plato.png'
 import aristotle from './assets/images/aristotle.png'
 import diogen_barrel from './assets/images/diogen_barrel.png'
 import sun from './assets/images/sun.png'
+import scholar from './assets/images/scholar.png'
 
 export default function MainPage() {
     const alignCenter = { display: 'flex', alignItems: 'center' }
     const alignStart = { display: 'flex', alignItems: 'flex-start' }
+    const alignBottom = { display: 'flex', alignItems: 'flex-end' }
     // DRY?????
     const ref1 = useRef(null);
     const ref2 = useRef(null);
@@ -64,29 +66,33 @@ export default function MainPage() {
           </ParallaxLayer>
   
           <ParallaxLayer sticky={{ start: 1, end: 2 }} style={{ ...alignCenter, justifyContent: 'center' }}>
-            <p className={styles.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id blandit lorem. Fusce finibus lacinia ligula non sollicitudin. Donec velit magna, convallis in cursus vel, accumsan in tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu interdum nunc, et imperdiet turpis. Quisque pulvinar quam lacus, a rhoncus elit suscipit sit amet. Sed maximus ante accumsan feugiat congue. Donec imperdiet ipsum eu lectus dapibus volutpat. Morbi sed sapien sed metus tincidunt viverra. Nullam lobortis, magna nec elementum laoreet, massa massa vulputate odio, rutrum interdum enim arcu vitae nulla. Vivamus eget justo rhoncus, laoreet nulla ut, semper leo.
+            <p className={styles.text}>Philsophy is a discipline and a way of life. This is especially true for some philosphers. One of the most stunning examples of this is Diogenes of Sinope.
+There are several famous anecdotes about the life of this philospher. One is a story of his meeting with Alexander the Great. Ever defiant of societal expectations, Diogenes lived in a Barell, leading an extremely ascetic life. Alexander heard tales of an eccentric philosopher and wanted to meet him in person. Ancient Greek historian Diogenes Laertius in his famous work"Lives of Eminent Philosophers" relates the results of the meeting:
+Alexander came and stood over him and said, "Ask of me any boon you like." To which he replied, "Stand out of my light."
             </p>
           </ParallaxLayer>
   
           <ParallaxLayer sticky={{ start: 3, end: 4 }} style={{ ...alignCenter, justifyContent: 'center' }}>
-            <p className={styles.text}>Donec ac euismod tortor. Nam semper orci quam, eu molestie ligula cursus sit amet. Nulla aliquam nisi at congue viverra. Maecenas lobortis orci vitae urna posuere ultricies. Fusce sodales, odio et finibus semper, nisi nibh iaculis nulla, dapibus hendrerit ante tortor et metus. Sed iaculis justo id mauris ultrices imperdiet. Cras nec sem fermentum, dictum augue eget, aliquam arcu. Mauris euismod arcu eget vehicula luctus.
+            <p className={styles.text}>Diogenes was no stranger to controversy, believing that virtue is better expressed on action than theoritized about, he was a true practitioner of his beliefs.
             </p>
           </ParallaxLayer>
   
           <ParallaxLayer sticky={{ start: 6, end: 7 }} style={{ ...alignCenter, justifyContent: 'center' }}>
             <img ref={ref2} className={styles.chicken} src={chicken}></img>
             <img ref={ref2} className={styles.diogenLamp} src={diogenLamp}></img>
-            <div className={styles.animation_text}>Pellentesque at purus rutrum, facilisis libero nec, interdum est. Curabitur venenatis nibh ligula, eu rhoncus ex pretium sit amet. Aliquam at rhoncus lorem, ac pulvinar neque. Cras faucibus, ex vitae imperdiet porta, ex ex fringilla justo, nec blandit elit mi ac massa. Nam id dolor et tellus sollicitudin tincidunt at ut turpis. Curabitur blandit risus nibh, sed scelerisque turpis finibus sed. Vivamus venenatis, lectus ut bibendum consequat, lorem nulla rhoncus nulla, sed auctor ipsum urna et mi. Aenean egestas hendrerit eros congue mollis. Suspendisse sed erat et felis tincidunt congue vel sed orci. Praesent aliquam sem ut consectetur vulputate. Aliquam scelerisque lacinia lorem, egestas imperdiet orci varius id. Cras sed orci fringilla nulla ultricies euismod. </div>
+            <div className={styles.animation_text}>One of the purely philosophical controversies Diogenes got into was about the nature of man. Athenina native Plato defined man as "Featherless biped" This amused Diogenes as in accordance with this definition he presented plucked chicken as an example of Plato's man.
+Other eccentric deed of Diogenes is his search for "an hones man": in the middle of the day he walked through Athens with a lit lantern trying to find one, the task was so hard that even lit lantern dif not allow to see one honest man in ancient Athens.
+ </div>
           </ParallaxLayer>
   
           <ParallaxLayer sticky={{ start: 8, end: 10 }} style={{ ...alignCenter, justifyContent: 'center' }}>
             {/*<img ref={ref3} className={styles.arcadia} src={arcadia}></img> */}
-            <div className={styles.text}>Pellentesque at purus rutrum, facilisis libero nec, interdum est. Curabitur venenatis nibh ligula</div>
+            <div className={styles.text}>Philosophy is a complicated and diverse field. if you want to delve deepeer visit sourses page, lot of discoveries await. We may not all want to be like Diogenes but maybe thinking about how our actions can facilitate better life can lead to a better world for all.
+Philosophy is of cource is not only exciting but also convoluted full of misreading and contradictions, pherhaps Diogenes' radical strategy was not one of the worst ways of dealing with the problems the nature of thought itself postulates.</div>
           </ParallaxLayer>
   
-          <ParallaxLayer sticky={{ start: 9, end: 10 }} style={{ ...alignCenter, justifyContent: 'center' }}>
-            <img className={styles.plato} src={plato}></img>
-            <img className={styles.aristotle} src={aristotle}></img>
+          <ParallaxLayer sticky={{ start: 9, end: 10 }} style={{ ...alignBottom, justifyContent: 'center' }}>
+            <img ref={ref3} className={styles.scholar} src={scholar}></img>
           </ParallaxLayer>
   
           {/* NAVIGATION LAYER */}
